@@ -1,0 +1,31 @@
+{
+  "name": "vue3-br",
+  "version": "1.0.5",
+  "description": "Tiny package for creating media query in your vue 3 application and use them as boolean values. This package is a successor to vue3-breakpoint which works the same as this package but depends on vuex to provide the results. Vue3-br is self-contained and exposing its breakpoints variables in a simple and reactive way!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilungasr/vue3-br.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vuex",
+    "media",
+    "query",
+    "mediaQuery",
+    "matchMedia",
+    "vue3",
+    "vue3-breakpoint",
+    "vue3-br"
+  ],
+  "author": "Dilunga SR (Sam)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dilungasr/vue3-br/issues"
+  },
+  "homepage": "https://github.com/dilungasr/vue3-br#readme"
+}
