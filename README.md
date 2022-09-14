@@ -44,7 +44,7 @@ Now you will be able to use the package accross your app.
 
 Defining your breakpoints is as simple as passing an object containing your breakpoints to `createBr()` function in your main.js file. Each breakpoint is a property with an array of one or two number type elements as pixel unit values.
 
-Syntaxy of the definition object:
+Syntax of the definition object:
 
 ```js
   {
@@ -81,7 +81,7 @@ app.use(br);
 
 You can use your breakpoints inside vue components as follows:
 
-_With script setup syntaxy_
+_With script setup syntax_
 
 ```html
 <template>
@@ -102,8 +102,8 @@ _With script setup syntaxy_
 </script>
 ```
 
-_With setup function syntaxy_
-
+_With setup function syntax_
+  
 ```html
 <template>
   <div class="column items-center justify-center q-gutter-y-md">
