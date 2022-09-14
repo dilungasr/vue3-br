@@ -81,6 +81,23 @@ app.use(br);
 
 You can use your breakpoints inside vue components as follows:
 
+_Using global $br variable,_
+
+```html
+<template>
+  <div class="column items-center justify-center q-gutter-y-md">
+    <!-- breakpoints -->
+    <div v-if="$br.min">On smaller screen</div>
+    <div v-if="$br.mid" :class="`${$br.somewhere ? 'text-red' : 'text-black'}`">
+      On Medium screen
+    </div>
+    <div v-if="$br.max">On Bigger screen!!</div>
+  </div>
+</template>
+
+<script>...</script>
+```
+
 _With script setup syntax_
 
 ```html
