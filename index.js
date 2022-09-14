@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 
 // breakpoint definitions
 const defns = {
@@ -15,6 +15,9 @@ const defns = {
 
 // breakpoint states goes here
 export const br = {};
+
+// br global properties on the vue app globalProperties
+const brGlobal = { br: {} };
 
 // caller calls all all the media query watcher functions to test the media query (Call Of Duty)
 function caller() {
@@ -101,13 +104,28 @@ export const createBr = (options = defns) => {
 
       // fire the mutation to update breakpoint
       br[key].value = mql.matches;
+      brGlobal.br[key] = mql.matches;
     };
     // add media query watcher handler
     mediaQueryHandlers.push(mediaQueryHandler);
   });
 
-  // CREATE VUE PLUGIN TO RUN THIS PLUGIN BEFORE THE VUE APP INSTANCE GETS INSTANTIATED
-  return () => {
+  // CREATE VUE PLUGIN TO RUN THIS PACKAGE BEFORE THE VUE APP INSTANCE GETS INSTANTIATED
+  return (app) => {
+    //inject br's global property in the vue app instance
+    app.config.globalProperties.$br = reactive({});
+
+    // keep the reference for media query handlers
+    brGlobal.br = app.config.globalProperties.$br;
+
+    // initialize all the definitions in the brGlobal
+    const allDefns = Object.entries(defns);
+    allDefns.forEach((objEntry) => {
+      const key = objEntry[0];
+      const val = objEntry[1];
+
+      brGlobal.br[key] = val;
+    });
     // start the sizeWatcher
     sizeWatcher();
   };
