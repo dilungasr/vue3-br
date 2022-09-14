@@ -14,7 +14,8 @@ Tiny vue 3 plugin for creating media query breakpoints in your vue 3 application
 
 > ## Installation
 
-Run the following commands in your existing vue project to add the package.
+Make sure Vue 3 is installed on your machine before any extra steps!
+Then run the following commands in your existing vue project to add the package.
 
 ```sh
 yarn add vue3-br
@@ -184,4 +185,3 @@ const defns = {
 
 _Please star this plugin on github if you find it useful!_
 <a href="https://github.com/dilungasr/vue3-br">vue3-br by Dilunga SR</a>
-
