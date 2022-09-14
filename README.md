@@ -95,7 +95,9 @@ _Using global $br variable,_
   </div>
 </template>
 
-<script>...</script>
+<script>
+  ...
+</script>
 ```
 
 _With script setup syntax_
@@ -120,7 +122,7 @@ _With script setup syntax_
 ```
 
 _With setup function syntax_
-  
+
 ```html
 <template>
   <div class="column items-center justify-center q-gutter-y-md">
@@ -200,5 +202,7 @@ const defns = {
 <br/>
 <br/>
 
-_Please star this plugin on github if you find it useful!_
-<a href="https://github.com/dilungasr/vue3-br">vue3-br by Dilunga SR</a>
+<div><em>Please star this plugin on github if you find it useful.</em></div>
+<br/>
+<div>Here is a link,</div>
+&#128073;&#127997; <a href="https://github.com/dilungasr/vue3-br">vue3-br by Dilunga SR</a>
