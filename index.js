@@ -1,7 +1,7 @@
 import { ref } from "vue";
 
-// default breakpoints
-const opts = {
+// breakpoint definitions
+const defns = {
   min: [0, 699],
   mid: [700, 1023],
   mode: [1024, 1299],
@@ -35,20 +35,20 @@ export function sizeWatcher() {
 const mediaQueryHandlers = [];
 
 // Vue plugin for configuring breakpoints and accessing vuex store
-export const createBr = (options = opts) => {
+export const createBr = (options = defns) => {
   //update configurations
   const configuredOpts = Object.entries(options);
   for (let i = configuredOpts.length; i--; ) {
     const key = configuredOpts[i][0];
     const val = configuredOpts[i][1];
 
-    // update the opts configurations
-    opts[key] = val;
+    // update the defns configurations
+    defns[key] = val;
   }
 
   // create updators and media query watchers for each configuration
-  const allOpts = Object.entries(opts);
-  allOpts.forEach((opt) => {
+  const allDefns = Object.entries(defns);
+  allDefns.forEach((opt) => {
     const key = opt[0];
     const val = opt[1];
 
